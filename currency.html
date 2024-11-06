@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tools</title>
+    <link rel="stylesheet" href="currency.css">
+</head>
+<body>
+    <header>
+        <h1>Currency Converter Website</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showConverter()">Currency Converter</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="currencyConverter" style="display: none;">
+                <div class="converter-container">
+                    <h2>Currency Converter</h2>
+                    <form id="currencyForm">
+                        <label for="fromCurrency">From:</label>
+                        <select id="fromCurrency" required>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="SEK">SEK - Swedish Krona</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                        </select>
+
+                        <label for="toCurrency">To:</label>
+                        <select id="toCurrency" required>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="SEK">SEK - Swedish Krona</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                        </select>
+
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" placeholder="Enter amount" required>
+
+                        <button type="submit">Convert</button>
+                    </form>
+                    <p id="conversionResult"></p>
+                    <p id="error-message"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>All rights reserved.</p>
+    </footer>
+
+    <script src="currency.js"></script>
+    <script>
+        function showConverter() {
+            document.getElementById('currencyConverter').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
